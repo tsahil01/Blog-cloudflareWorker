@@ -22,11 +22,11 @@ user.post('/signup', async (c)=>{
         const payload = {
             email: body.email
         }
-        const token = jwt.sign(payload, secretKey);
+        // const token = jwt.sign(payload, secretKey);
         return c.json({
             msg: "success",
             email: createUserResponse.email,
-            token: token
+            // token: token
         })
     } catch(e){
         return c.json({
@@ -50,11 +50,11 @@ user.post('/signin', async (c)=>{
         const payload = {
             email: body.email
         }
-        const token = jwt.sign(payload, secretKey);   
+        // const token = jwt.sign(payload, secretKey);   
         return c.json({
             msg: "success",
             email: userLoginResponse.email,
-            token: token
+            // token: token
         })
     } catch(e){
         return c.json({
