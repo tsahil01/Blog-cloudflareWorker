@@ -3,4 +3,3 @@
 ### Backend - 
 - Hono as express alternative
 - Postgres and Prisma for Database
-- 
