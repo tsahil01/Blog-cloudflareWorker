@@ -1,6 +1,8 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@prisma/client/edge'
+import { withAccelerate } from '@prisma/extension-accelerate'
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient().$extends(withAccelerate())
+
 
 interface User {
     email: string
@@ -9,7 +11,10 @@ interface User {
 
 async function createUser(user:User) {
     const response = await prisma.user.create({
-        data: user
+        data: {
+            email: user.email,
+            password: user.password
+        }
     })
     return response
 }
