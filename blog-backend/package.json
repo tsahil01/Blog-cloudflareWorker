@@ -9,7 +9,13 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240208.0",
-    "typescript": "^5.0.4",
+    "@types/node": "^20.11.17",
+    "prisma": "^5.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.0.2"
   }
 }
