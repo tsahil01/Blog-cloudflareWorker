@@ -19,5 +19,15 @@ async function createUser(user:User) {
     return response
 }
 
+async function signinUser(user: User) {
+    const response = await prisma.user.findFirst(({
+        where: {
+            email: user.email,
+            password: user.password
+        }
+    }))
+    return response;
+}
 
-export { createUser }
+
+export { createUser, signinUser }
