@@ -11,7 +11,7 @@ posts.get('/', async (e)=>{
 
 posts.get('/posts', async (c)=>{
     try{
-        const posts = allPosts();
+        const posts = await allPosts();
         return c.json({
             msg: posts
         })
