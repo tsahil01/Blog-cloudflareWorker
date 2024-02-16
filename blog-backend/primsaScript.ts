@@ -3,7 +3,6 @@ import { withAccelerate } from '@prisma/extension-accelerate'
 
 const prisma = new PrismaClient().$extends(withAccelerate())
 
-
 interface User {
     email: string
     password: string
@@ -57,5 +56,6 @@ async function getPostById(postId:string) {
     })
     return response;
 }
+
 
 export { createUser, signinUser, allPosts, addPosts, getPostById }

@@ -10,7 +10,6 @@ datasource db {
   url      = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZjc5Mzc3ZjctOWQ4Ny00Yjk5LTg5ODktOWI3ZTczZjI2ZWQ2IiwidGVuYW50X2lkIjoiMDgwOTM0ZWZiMDkxZTRhNWU2NGY1MDI3NDIyMjI5Yjk0ZGFiMWU1NDBiYWQ5ZDM4YjY4MjhiZjBjOTJlMTY1ZSIsImludGVybmFsX3NlY3JldCI6ImFiNDRjYzI1LWQwMjMtNDliZi1hNWI4LTFkNzlhYmQ1MDFiOSJ9.tnRJ6BOIFdCN6pc8RC4ktnOpR8F7OEGXP-q_hChDlmo"
 }
 
-
 model User {
   id          Int     @unique @default(autoincrement())
   email       String  @unique
